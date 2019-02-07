@@ -2,6 +2,28 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class Header extends Component {
+  renderContent() {
+    switch (this.props.auth) {
+      case null: {
+        return;
+      }
+      case false: {
+        return (
+          <li>
+            <a href="/auth/google">Login With Google</a>
+          </li>
+        );
+      }
+      default: {
+        return (
+          <li>
+            <a>Logout</a>
+          </li>
+        );
+      }
+    }
+  }
+
   render() {
     return (
       <nav>
@@ -9,11 +31,7 @@ class Header extends Component {
           <a href="#" className="left brand-logo">
             Emaily
           </a>
-          <ul className="right">
-            <li>
-              <a href="#">Login With Google</a>
-            </li>
-          </ul>
+          <ul className="right">{this.renderContent()}</ul>
         </div>
       </nav>
     );
