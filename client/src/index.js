@@ -17,3 +17,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+
+
+console.log('STRIPE KEY IOS', process.env.REACT_APP_STRIPE_KEY);
+console.log('env is', process.env.NODE_ENV);
