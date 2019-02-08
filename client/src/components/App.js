@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
+
 import { fetchUser } from "../actions";
 
 import Header from "./Header";
 import Landing from "./Landing";
 import Dashboard from "./Dashboard";
-
-const SurveyNew = () => <h2>SurveyNew</h2>;
+import SurveyNew from "./surveys/SurveyNew";
 
 class App extends Component {
   componentDidMount() {
