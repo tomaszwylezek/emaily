@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
 
-
-const SurveyFormReview = () => {
+const SurveyFormReview = ({onCancel}) => {
   return (
     <div>
-      review survet
+      <h5>Please confirm your entries</h5>
+      <button
+        className="yellow darken-3 btn-flat"
+        onClick={onCancel}
+      >
+        Back
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default SurveyFormReview
+export default SurveyFormReview;
