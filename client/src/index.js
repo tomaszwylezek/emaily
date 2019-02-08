@@ -9,6 +9,11 @@ import { createStore, applyMiddleware } from "redux";
 import reducers from "./reducers";
 import App from "./components/App";
 
+
+// Development only axios
+import axios from "axios";
+window.axios = axios;
+
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
@@ -18,6 +23,5 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-
-console.log('STRIPE KEY IOS', process.env.REACT_APP_STRIPE_KEY);
-console.log('env is', process.env.NODE_ENV);
+console.log("STRIPE KEY IOS", process.env.REACT_APP_STRIPE_KEY);
+console.log("env is", process.env.NODE_ENV);
